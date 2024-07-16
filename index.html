@@ -8,11 +8,11 @@
 </head>
 <body class="bg-primary-subtle" >
   <div class="text-center mx-4 my-4 p-2 border rounded bg-light bg-gradient">
+<h1>Counter widget with AlpineJS</h1>
 
-
-<div x-data="{ count : 0, max: 30} ">
+<div x-data="{ count : 0, max: 15} ">
         <p x-text="count"></p>
-        <p x-text="max"></p>
+        <!-- <p x-text="max"></p> -->
       <button @click="if (count < max) count++">Increment</button>
       <button @click="if (count > 0) count--">Decrement</button>
 
