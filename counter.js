@@ -1,16 +1,24 @@
-function Counter() {
-    return {
-      count: 0,
-      increment() {
-        this.count++;
-      },
-      decrement() {
-        this.count--;
-      },
-    };
-  }
+function counterApp() {
+  return {
+    mainCount: 0,
 
-  // ensure that AlpineJS is properly loaded
-  document.addEventListener('alpine:init', () => {
-    Alpine.data('counter', Counter);
-  });
+    incrementMain() {
+      if (this.mainCount < 10) {
+          this.mainCount++;
+        }
+    },
+    decrementMain() {
+      if (this.mainCount > 0) {
+        this.mainCount--;
+      }
+    },
+    resetMain() {
+      this.mainCount = 0;
+    },
+    maxMain() {
+      this.mainCount = 10;
+    },
+  };
+}
+
+
